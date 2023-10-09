@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loader</title>
+    <style>
+        #loader {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid white;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #loader > div {
+            width: 300px;
+            height: 300px;
+            background: url("assets/img/loader.gif");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body>
+<h1>Window vs Document</h1>
+<h1>To Test This We want to have some contents out here!</h1>
+<!--So here I added the IJSE site. you know it's going to get so much
+time to load :-D -->
+<iframe src="http://ijse.lk" frameborder="0" width="100%" height="500px"></iframe>
+
+<h2>:-(</h2>
+<h3>Every one will see how our page is loading</h3>
+
+<p>So we have to resolve this by showing a loader while the page is fully loading</p>
+
+<section id="loader">
+    <div></div>
+</section>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script>
+//load
+//DOMContentLoaded
+//window->on->load
+//document->ready
+
+//this will execute after window is fully loaded
+$(window).on('load',function (){
+    // $("#loader").css('display','none');
+    $("#loader").fadeOut(1000);
+    console.log("Window is fully loaded");
+});
+
+
+//if you want to run something just after the creation of DOM object this is the event for that
+$(document).ready(function (){
+    console.log("Document is ready")
+});
+
+//alternative
+$(function (){
+    console.log("Document is ready");
+});
+
+
+//we want to hide all the content till the page is fully loaded
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="h1ID" class="a">Hello There. Let's use jQuery for DOM manipulations</h1>
+<h2 id="h2IDOne" class="a">Hello There</h2>
+<h2 id="h2IDTwo" class="a">Hello There</h2>
+<h3 id="h3ID" class="b">Haai</h3>
+<ul id="ulID" class="b">
+    <li>A</li>
+    <li>A</li>
+    <li>A</li>
+    <li>A</li>
+</ul>
+
+<button id="btn">Test</button>
+
+
+<script>
+    // let h1=document.querySelector("h1");
+    // h1.style.color='red';
+</script>
+
+
+<script src="../asets/js/jquery-3.7.1.min.js"></script>
+
+<script>
+    // $("h1").css("color",'red');
+
+    //so in jQuery how to select dom elements.?
+    // $('h2')
+
+
+    //So in jQuery we can select anything we want by just typing $()
+    $('h1')//element name;
+    //if the content can be selected them the result will be provided
+    //inside a jQuery object like -> ce.fn.init[ul, prevObject: ce.fn.init(1)]
+
+
+    //so what we can put inside $('?')
+    //id selectors
+    $("#ulID");//working
+
+    //class selectors
+    $(".a");//working
+
+    //attribute selector
+    $('[id]');//working
+
+    //pseudo classes
+    $('li:nth-child(1)');//working
+
+    //combinators
+    $('ul li');//working
+    $('ul>li');//working
+    $('h1+h2');//working
+    $('h1~h2');//working
+
+    //what about grouping.?
+    $('h1,h2');
+
+    //universal.?
+    $('*');//working
+
+
+    //if you want to change the default selecting method
+    //you are allowed to do it
+    let RS = jQuery.noConflict();
+    RS('h1');
+
+
+</script>
+
+
+</body>
+</html>

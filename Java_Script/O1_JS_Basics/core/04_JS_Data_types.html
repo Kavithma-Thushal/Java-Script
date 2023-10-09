@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Data Types</title>
+</head>
+<body>
+<h1>JS Data Types</h1>
+<h2>How many data types are there in JS | 9</h2>
+<dl>
+    <dt>Primitive Data Types | 6</dt>
+    <dd>String</dd>
+    <dd>Boolean</dd>
+    <dd>Number</dd>
+    <dd>BigInt</dd>
+    <dd>Undefined</dd>
+    <dd>Symbol</dd>
+</dl>
+
+<dl>
+    <dt>Structural Data Types | 2</dt>
+    <dd>Objects</dd>
+    <dd>Functions</dd>
+</dl>
+
+<dl>
+    <dt>Structural Root Primitive | 1</dt>
+    <dd>Null</dd>
+</dl>
+
+<h3>What are the String related methods?</h3>
+<ul>
+    <li>toUpperCase()</li>
+    <li>toLowerCase()</li>
+    <li>trim()</li>
+    <li>trimLeft()</li>
+    <li>trimRight()</li>
+    <li>charAt(3)</li>
+    <li>charCodeAt(3)</li>
+    <li>indexOf("I")</li>
+    <li>substring(0,10)</li>
+    <li>split(",")</li>
+</ul>
+<h3>What are objects in JS.?</h3>
+
+<h3>String Literals</h3>
+
+
+<script>
+
+    //Data types
+    //===========
+
+    //**Primitive DataTyped**
+    //01.String
+    //02.Number
+    //03.Boolean
+    //04.Undefined
+    //05.Symbol (new)
+    //06.BigInt (new)
+
+    //**Structural Primitive**
+    //07.Object
+    //08.Function
+
+    //**Root Structural Primitive**
+    //09.Null
+
+
+
+    // Let's Explore One By One
+
+    //01.String
+    var methodOne = 'Dasun Shanaka';
+    var methodTwo = "Kamal Sahabandu";
+
+    //String literal
+    var methodThree = `My Name Is ${methodOne} , ${methodTwo}`;
+
+    var concat = methodOne + methodTwo;
+
+    console.log(typeof methodOne);
+    console.log(typeof methodTwo);
+    console.log(typeof methodThree);
+    console.log(methodThree);
+    console.log(concat);
+
+
+    //02.Number
+    let number1 = 100;
+    let number2 = 100.10;
+    console.log(typeof number1);
+    console.log(typeof number2);
+
+
+    // if you want to parse a string to number in js
+    //you can use following options to do that
+    let out = parseInt("100") + 100;
+    console.log(out);//200
+
+    let floatingNumber = parseFloat("100.30") + 200.45;
+    console.log(floatingNumber)
+
+
+    //03.Boolean
+    let a=true;
+    let b=false;
+
+
+    //04.Undefined
+    //this type can be found on loose type languages
+    var age=100; //age has a type now, it's a number
+   // var a;// but a has no data type because a has no assigned value
+    //if we check typeof a, it will be undefined
+    //so undefined is a data type which will represent when there
+    //is no data type defined for a variable
+
+
+    //05.Symbol (new)
+    //To generate a unique keys in Objects
+
+
+
+    //06.BigInt (new)
+    //Number.MAX_SAFE_INTEGER // 9,007,199,254,740,991
+    //if we are using a larger number than 9,007,199,254,740,991
+    //we can use bigint data type with js
+    //to create a big int you can add n to the end of the number
+    let number=100n; // this will refer the bigInt Data type
+    typeof number; //big int
+
+
+
+    //07.Object (Will continue in 09th html file)
+   // let customer= name="Dasun",age:100,state:false
+   //literal base objects
+    //Object is a named value container in js
+    //name =key, property
+    var customer={
+        name:"Dasun",
+        age:100,
+        state:false,
+        colors:['red','green'],
+        printMyName:function(){
+            console.log("My Name is "+this.name);
+        }
+    }
+
+    customer.printMyName();
+    console.log(customer.colors[0]);
+
+    //how to access values in an object
+    // there are two ways to do that
+    //dot notation
+    console.log(customer.name);
+    console.log(customer.age);
+
+    //bracket notation
+    console.log(customer['name']);
+
+
+    //So what about adding new properties and deleting them
+    //add new value after creating the object
+    customer.salary=1100;
+
+    //delete existing value
+    delete customer.name;
+
+    //change current value
+    customer.age=200;
+
+    //all the changes can be done. there is no issue at all
+    //that's why js is known to have dynamic objects
+
+
+
+
+    //constructor base, function base
+    function Customer(id,name,address){
+        this.id=id;
+        this.name=name;
+        this.address=address;
+    }
+
+    var c1= new Customer("C001","Dasun","Galle");
+    var c2= new Customer("C002","Lahiru","Galle");
+    //c1 is the object
+
+    console.log(c1);
+    console.log(c2);
+
+
+
+    //08.Function (Will continue in 08th html file)
+    //we have already reviewed this
+
+
+    //09.Null
+    //Null is also a data type which we can use to initialize a variable when there is no value
+
+    let myName;//if we put it like this, this is undefined
+    //and also not initialized
+
+    //if we wanted to initialize this, but still we don't have a value
+    //so here we can use Null data type
+    myName=null;
+
+</script>
+</body>
+</html>

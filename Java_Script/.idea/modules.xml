@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/O10_Inmemory_POS.iml" filepath="$PROJECT_DIR$/O10_Inmemory_POS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O11_Window_vs_Document.iml" filepath="$PROJECT_DIR$/O11_Window_vs_Document.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O1_JS_Basics.iml" filepath="$PROJECT_DIR$/O1_JS_Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O2_DOM_Manipulation.iml" filepath="$PROJECT_DIR$/O2_DOM_Manipulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O3_Single_Page_Applications.iml" filepath="$PROJECT_DIR$/O3_Single_Page_Applications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O4_Browser_APIs.iml" filepath="$PROJECT_DIR$/O4_Browser_APIs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O5_QUE.iml" filepath="$PROJECT_DIR$/O5_QUE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O6_jQuery.iml" filepath="$PROJECT_DIR$/O6_jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O7_Events.iml" filepath="$PROJECT_DIR$/O7_Events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O8_Knight.iml" filepath="$PROJECT_DIR$/O8_Knight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/O9_Validations.iml" filepath="$PROJECT_DIR$/O9_Validations.iml" />
+    </modules>
+  </component>
+</project>

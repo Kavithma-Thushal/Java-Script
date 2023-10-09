@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listeners in JS</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css ">
+</head>
+<body>
+<section class="container mt-5">
+    <h1 id="h1ID">How to add an Event Listener in JS.?</h1>
+    <dl>
+        <dt>Event Types</dt>
+        <dd>Global</dd>
+        <dd>Specified</dd>
+    </dl>
+    <button onclick="alert('haai')" class="btn btn-danger">Test</button>
+
+    <h1 onmousemove="moveMoveInvoked()">jQuery Formalized events</h1>
+    <p>which means mostly using events in JS.
+        to simplify the development process jQuery has
+        developed some methods to access the events in a formalized manner.
+        so they are introduced as formalize events
+    </p>
+
+    <ul>
+        <li>click(function)</li>
+        <li>dblclick(function)</li>
+        <li>foucs(function)</li>
+        <li>blur(function)</li>
+        <li>keydown(function)</li>
+        <li>keyup(function)</li>
+        <li>keypress(function)</li>
+        <li>mousedown(function)</li>
+        <li>mouseup(function)</li>
+        <li>mousemove(function)</li>
+
+    </ul>
+</section>
+
+<script>
+function moveMoveInvoked(){
+    console.log("Mouse is moving")
+}
+
+
+//specified events
+let h1=document.querySelector("#h1ID");
+h1.addEventListener("mousemove",function (e){
+    console.log("Hello",e);
+});
+
+//there are two types of events
+//global events (globally html element attribute through handle events) - (less responsive, easy to call)
+//specified events (separately specified events) (more control)
+
+
+//what is event object.?
+//it just an object which we can use to get all the information about the object
+
+
+//formalized methods
+//jQuery has introduced several formalized events for the ease of use
+
+$('#btn').click(function (){
+    alert("DD")
+});
+
+$('#btn').dblclick(function (){
+    alert("Btn Double Clicked");
+});
+
+
+
+//standard way of writing events in jQuery
+$('#btn').on('click',function (){
+    alert('bb');
+});
+
+
+//unbind event
+$('#btn').off("click");
+</script>
+</body>
+</html>

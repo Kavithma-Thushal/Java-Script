@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task One</title>
+    <link rel="stylesheet" href="../../asets/css/bootstrap.css">
+    <style>
+        div{
+            background-repeat: no-repeat;
+            background: url("");
+        }
+    </style>
+</head>
+<body>
+<section class="container mt-3">
+    <section class="row">
+        <!--Case One-->
+        <div class="col">
+            <h1 id="cDis">Hello There How are you.?</h1>
+            <input id="txt" class="form-control" type="text" placeholder="Input Something">
+            <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
+        </div>
+
+        <!--Case Two-->
+        <div class="col">
+            <h1>Input an Image Url</h1>
+            <input id="url" class="form-control" type="url" placeholder="Input Image URL" value="https://www.coursenet.lk/Content/courses/22856/690921520190407.png">
+            <div id="img" style="height: 50vh" class="mt-2 border shadow"></div>
+            <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
+        </div>
+    </section>
+</section>
+
+<script>
+    //Case One
+    //Bind an event for Change Text Input Field
+    //Get Input Text Value
+    //Assign it to H1 text
+    //Change the color of h1 to red
+    //Change font size t0 4em
+    document.querySelector("#txt").addEventListener("keyup", function () {
+        document.querySelector("#cDis").innerText=document.querySelector("#txt").value;
+    });
+
+    document.querySelector("#btn1").addEventListener("click",function (){
+        document.querySelector("#cDis").style.color='red';
+    });
+
+
+
+    //Case Two
+    //Bind an event for Change Image Btn
+    //Get Input URL Value
+    //Assign it to the Image src
+    //https://www.ijse.lk/images/logos/ijse.png
+    //https://www.coursenet.lk/Content/courses/22856/690921520190407.png
+
+    document.querySelector("#btn2").addEventListener('click',function(){
+        var typeValue=document.querySelector("#url").value;
+        var divContainer=document.querySelector("#img");
+
+        divContainer.style.background=`url(${typeValue})`;
+        divContainer.style.backgroundPosition='center';
+        divContainer.style.backgroundSize='contain';
+        divContainer.style.backgroundRepeat='no-repeat';
+    })
+
+
+
+</script>
+</body>
+</html>

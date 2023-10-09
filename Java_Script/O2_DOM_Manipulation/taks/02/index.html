@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Two</title>
+  <link rel="stylesheet" href="../../asets/css/bootstrap.css">
+</head>
+<body>
+
+<section class="container">
+    <h1>Task Generator.!</h1>
+   <div class="row">
+       <div class="col-4">
+           <input id="txt" class="form-control" type="text" placeholder="Input a Task">
+           <button id="btn" class="btn btn-danger mt-2">Add Task</button>
+       </div>
+       <div class="offset-1 col-3 shadow overflow-x-hidden" style="height: 70vh">
+           <ol id="list" class="list-group p-2">
+               <li class="list-group-item">Task One</li>
+
+           </ol>
+       </div>
+   </div>
+</section>
+
+
+
+<script>
+//Bind an event for Change Text Btn
+//Get Input Text Value
+//Create a list element
+//Add it to the Ordered List
+
+let btn=document.querySelector("#btn");
+let ol=document.querySelector("#list");
+
+btn.addEventListener("click",function (){
+    let typInp=document.querySelector("#txt").value;
+
+    //We have to create a li element dynamically and add it the
+    //the above ol list
+    //<li class="list-group-item">Task Two</li>
+
+    //let's create new list item
+    let li=document.createElement("li");
+
+    //if there are any classes which we want to add to the li element,
+    // we can add it as the following way
+    li.setAttribute("class","list-group-item");
+
+    //set input filed typed text task to the list
+    li.textContent=typInp;
+
+    //append() // to add child element to any parent element
+    ol.prepend(li);//added newly created list to the selected ol
+    //added newly created list to the selected ol
+
+    // append();//add to the last
+    // prepend();//add to the top
+
+});
+
+
+</script>
+</body>
+</html>

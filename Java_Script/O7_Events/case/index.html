@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Move Event</title>
+</head>
+<body>
+<h1>Hello There..!</h1>
+
+
+<script src="../assets/js/jquery-3.7.1.min.js"></script>
+<script>
+    // let h1=document.querySelector("h1");
+    //
+    // document.addEventListener('mousemove',function (e){
+    //     console.log("Mouse Move",e.pageX,e.pageY)
+    //     h1.style.position='relative';
+    //     h1.style.left=e.pageX+'px';
+    //     h1.style.top=e.pageY+"px";
+    // });
+
+    //with jQuery
+    $(document).mousemove(function (e){
+        $('h1').css({
+            'position':'relative',
+            'left':e.pageX+'px',
+            'top':e.pageY+"px"
+        });
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

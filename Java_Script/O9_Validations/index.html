@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation with JS</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+<section class="container mt-3">
+    <h1>Validations with JS</h1>
+    <p>Usage of RegEx Literals</p>
+    <div class="row mt-3">
+        <div class="col-5">
+            <input id="txt" type="text" placeholder="Input ID C00-001" class="form-control">
+            <button  id="btn" class="btn btn-danger mt-3">Save</button>
+        </div>
+    </div>
+</section>
+
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script>
+    //Regular Expressions
+    // so for validations we can use regex literals
+    // let regEx = /[a-z]{2}/; // this is how to put a regular expression
+    // regEx.test('aa');//true
+    // regEx.test('aAaA');//false
+
+
+    // C00-123
+    $("#btn").attr('disabled',true);
+
+    const validation = /^(C00-)[0-9]{3}$/;
+
+    $("#txt").keyup(function (e) {
+
+        let value = $("#txt").val();
+
+        if (value.length == 0) {
+            $("#btn").attr('disabled',true);
+            $("#txt").css('border', '1px solid #ced4da');
+
+        } else {
+            let res = validation.test(value);
+            if (res) {
+                $("#txt").css('border', '2px solid green');
+                $("#btn").attr('disabled',false);
+            } else {
+                $("#txt").css('border', '2px solid red');
+                $("#btn").attr('disabled',true);
+            }
+        }
+
+    });
+
+    $("#btn").click(function (){
+        alert("Data Input.!");
+        $("#txt").val(""); // clear
+
+    });
+
+
+</script>
+</body>
+</html>

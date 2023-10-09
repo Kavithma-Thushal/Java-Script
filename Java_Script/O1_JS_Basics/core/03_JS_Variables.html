@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Variables</title>
+</head>
+<body>
+<h1>How to create a variable in JS.?</h1>
+<h2>What is loose typing in JS?</h2>
+<h2>What is strong typing?</h2>
+<h2>What is Dynamic typing in JS?</h2>
+<h2>What are Declaration Types in JS.?</h2>
+<h2>What are the Issues with Var</h2>
+<h2>How to resolve Var issues</h2>
+<h2>What is const?</h2>
+<h2>What is variable hoisting in JS</h2>
+<h2>How to create a valid identifier</h2>
+<h2>How to create read only values in JS</h2>
+<h2>What is let?</h2>
+<ul>
+  <li>Case Sensitive</li>
+  <li>a-Z,$ or _</li>
+</ul>
+
+
+<script>
+
+    //how to create a variable in JS
+    //Strong Type
+    //String name="Malitha";
+    //int age=100;
+    //int age="100"; //error
+
+    //if a data type is defined before or after a variable and
+    //if the value can be assigned according the data type those
+    //languages are known as strong type languages
+
+
+    //So this is how to create a variable in JS
+    var name='Kavindu'; // what is the data type here.?
+    //variable (Declaration Type)
+    //because there is no type defined while creating a variable
+    //js is known as Loose Type language
+
+
+
+    //Dynamic Typing
+    var address="Galle";
+    typeof address;//string
+
+    address=100;//we can change it as we like
+    typeof address;//number -it will change dynamically to a number type
+
+    address=true;//we can change it as we like
+    typeof address;//boolean -it will change dynamically to a boolean type
+    //because of this reason js is known as a dynamic type language
+
+
+
+    //Scope Issue with var
+    var age=100; //global variable
+    {
+        console.log(age);// working
+    }
+
+
+
+    {
+        //local scope
+        var tp=1199;
+    }
+    console.log(tp);//normally should be an error
+    //but in js no issue at all. you can access var variables outside the scope
+    //var is not satisfying scopes
+
+
+    //variable hoisting
+    console.log(i);//we can use variables which can be later initialized,
+    //This is not an error according to js
+    //according to the js, it's feature called hoisting
+
+    var i=100;//initialize
+
+    //what are the qualities with var variables?
+    //01. Loose Typing : Yes
+    //02. Dynamic Typing : Yes
+    //03. Not care about scope : Yes
+    //04. Variable hoisting : Yes
+
+    //Var issues
+    //01.Can duplicate same variable name : Yes
+    //02.Not care about scope : Yes
+
+    //So because there are so many issues with var, then we have another options
+    //variable to create variables in JS
+
+    //LET (Declaration Type)
+    //========================
+    //let declaration type
+    let myID="C001";
+    typeof  myID;//string
+
+    myID=true;//will dynamically change to boolean
+    typeof myID;//boolean
+
+
+    {
+        let myState=true;
+    }
+
+
+    // console.log(myAddress); // error
+    let myAddress="Galle";
+
+    //let's try to duplicate let variables
+    let myCar="BMW1";
+    // let myCar="BMW2";//error
+
+    //console.log(myState);//error (let satisfied the scope)
+
+    //what are the qualities with let variables?
+    //01. Loose Typing : True
+    //02. Dynamic Typing : True
+    //03. Not care about scope : No : Let variables think about the scope
+    //04. Variable hoisting : No Not Supporting
+
+    //Var issues over let
+    //01.Can duplicate same variable name :No : cant duplicate
+    //02.Not care about scope:  No : Let variables think about the scope
+
+
+    // const (Declaration type)
+    // console.log(myColors);//not support hosing with const
+    const myColors='RED'; //read only values
+    // const myColors='RED';//cannot duplicate same variable name with const
+
+    //what are the qualities with const variables?
+    //01. Loose Typing : True
+    //02. Dynamic Typing : False
+    //03. Not care about scope : No : Let variables think about the scope
+    //04. Variable hoisting : No Not Supporting
+
+    //Var issues over const
+    //01.Can duplicate same variable name :No : cant duplicate
+    //02.Not care about scope:  No : Let variables think about the scope
+
+
+
+    //So, finally what about variable name.?
+    //is it case_sensitive.?
+    //how you can start variable names.?
+    let a=100;
+    let A=200;
+    console.log(a); //yes, js is a case sensitive language
+    console.log(A);
+
+    //what type of characters that you can use for the first letter of the variable.?
+    let $hello=100; //valid
+    let a_z_hello=100; //a-z any characters are valid
+    let _hello=100; //_ is also valid
+    // let 1_hello=100; //not valid
+
+
+
+
+
+
+</script>
+</body>
+</html>

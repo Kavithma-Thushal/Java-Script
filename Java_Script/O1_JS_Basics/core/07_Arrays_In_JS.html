@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<h1>What are arrays in js?</h1>
+<h2>What are the ways of creating an array?</h2>
+<h2>What are the array related methods which we can use?</h2>
+<dl>
+    <dt>Array Related methods</dt>
+    <dd>push</dd>
+    <dd>pop</dd>
+    <dd>shift</dd>
+    <dd>unshift</dd>
+    <dd>slice</dd>
+    <dd>splice</dd>
+    <dd>reverse</dd>
+    <dd>indexOf</dd>
+    <dd>sort</dd>
+</dl>
+
+<script>
+//So there are multiple ways of creating arrays.
+
+
+
+
+
+//So what about viewing them.?
+
+
+
+//So what about manipulating these data as we needed?
+//array.length //get how many values are there
+//array.push(value); // add value to the last index
+//array.pop(); // remove the last indexed value of the array
+//array.shift();// remove the first index value of the array
+//array.unshift(value);//add value to the first index of the array
+//array.splice(2,2);// used to remove values from the middle of the array // first param = delete index, second param = delete count
+//array.slice(2,3);// you can copy an array values into another variable as a new array // start and end index numbers
+//array.reverse();
+//array.indexOf();// will search by the value and will return the index number
+//array.sort();
+
+
+//There are two ways of creating arrays in JS
+
+//literal base array // row method
+// var names=["Dasun","Kasun","Ramal","Dewmith","Lahiru"];
+
+//constructor base array
+// var colors= new Array("red",'green',"orange");
+
+//how to get values from an array in js
+// names[0];
+// colors[0];
+
+
+
+// for (let i = 0; i <names.length ; i++) {
+//     console.log(names[i]);
+// }
+
+
+var numbers=[10,20,30,40,50];
+
+//will add a value to the last index
+numbers.push(60);
+//[10, 20, 30, 40, 50, 60]
+
+numbers.push(70);//7
+//[10, 20, 30, 40, 50, 60, 70]
+
+
+//will remove the last index value
+numbers.pop();//70
+numbers.pop();//60
+//[10, 20, 30, 40, 50]
+
+numbers.pop();//50
+//[10, 20, 30, 40]
+
+
+//will add a value to the first index
+numbers.unshift(1);//5
+//[1, 10, 20, 30, 40]
+
+numbers.unshift(2);//6
+//[2, 1, 10, 20, 30, 40]
+
+numbers.unshift(3);//7
+//[3, 2, 1, 10, 20, 30, 40]
+
+
+//will remove the value from first index
+numbers.shift();//3
+//[2, 1, 10, 20, 30, 40]
+
+numbers.shift();//2
+//[1, 10, 20, 30, 40]
+
+numbers.shift();//1
+//[10, 20, 30, 40]
+
+
+//will delete array value using the index number and delete count
+//first param = delete index number
+//second param = delete count
+numbers.splice(1,1);
+//[10, 30, 40]
+
+
+//so if you want to copy an array to a new one
+// numbers.slice(0,2);
+
+//and if you want to search a value in a array and get the index number
+// numbers.indexOf(10);
+
+
+//if you wanna reverse a array
+// numbers.reverse();
+
+
+//if you want to sort an array
+// numbers.sort();
+
+
+</script>
+</body>
+</html>

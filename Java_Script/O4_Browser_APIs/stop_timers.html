@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stop Timers</title>
+</head>
+<body>
+
+
+<script>
+
+    let count=0;
+    //how to create a timer
+    let id=setInterval(function (){
+        count++;
+        console.log(count);
+    },1000);
+
+    //how to stop a timer
+    //if we want to stop a timer we need the timer id
+    clearInterval(id); //so here it will stop the timer
+    //which is linked to the id
+
+
+    //so if we want to stop a time out type timer
+   let sid= setTimeout(function (){
+        console.log("This will invoke after 2000 ms")
+    },2000);
+
+
+   //if you wanna stop the above set timeout timer
+    //then you have to invoke the below method
+    clearTimeout(sid);
+</script>
+</body>
+</html>

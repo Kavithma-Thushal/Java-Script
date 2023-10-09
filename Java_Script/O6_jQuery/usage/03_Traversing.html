@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traversing Methods</title>
+</head>
+<body>
+<h1>Traversing Methods in Jquery</h1>
+<section>
+    <div>
+        <h3>Hello</h3>
+        <h3>Change the color</h3>
+    </div>
+
+    <ul>
+        <li>Hello : eq0</li>
+        <li id="b">Hello : eq1</li>
+        <li>Change color to red : eq:2</li>
+    </ul>
+</section>
+
+<ul>
+    <li>children()</li>
+    <li>children(':nth-child(1)')</li>
+    <li>children(':eq(1)')</li>
+    <li id="a">find()</li>
+    <li>get()</li>
+    <li>parent()</li>
+    <li>parents()</li>
+    <li>eq()</li>
+</ul>
+
+
+<script src="../asets/js/jquery-3.7.1.min.js"></script>
+<script>
+    //will return all the root children of the body
+    $('body').children(); //collection
+
+    //so if you want you can select one like this from the children
+    // body>section
+    $('body').children('section');
+
+    //we can traverse more if we wanted to
+    // body>section>ul
+    $('body').children('section').children('ul');
+
+
+    //change the color of the last list item
+    // :nth-child
+    // :eq
+    // :last-child
+    // :first-child
+
+    // .eq(); //jQuery Object
+    //.get(); will return html element (cannot invoke jQuery methods after calling get method)
+
+    // body>section>ul>li:last-child
+    // $('body').children('section').children('ul').children(':nth-child(3)').css('color','red');
+    // $('body').children('section').children('ul').children(':eq(2)').css('color','red');
+    $('body').children('section').children('ul').children().eq(2).css({
+        'color':'red',
+        'font-size':'30px'
+    });
+
+
+
+
+    //will return only one element
+    //always will select the nearest parent of the element
+    $("#b").parent().parent().parent().parent().parent();
+
+
+    //if someone want's to get the parent hierarchy of a element we can use parents method
+    $("#b").parents();
+
+
+    //so here we can traverse up and down using those methods
+    $("#b").parents('section').children('ul');
+
+
+    $('#a').parent().parent('body').children('section').children('div').children(":last-child").css('color','green');
+
+
+    //we can use find method to search a child inside a parent
+    $('#a').parent().parent('body').children('section').children('div').find('h3');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser APIs</title>
+</head>
+<body>
+<h1>Browser APIs are some APIs which is plugged to the Browser externally to the Core of JS</h1>
+<p>So there are several APIs like that</p>
+<p>So here we want to wait some time and execute a process</p>
+<p>For that we have Timers</p>
+
+<h3>So here we have two types of timers in JS</h3>
+<ul>
+    <li>Set Timeout - Wait and Run (Only Once)</li>
+    <li>Set Interval - Wait and Run (Continuously)</li>
+</ul>
+
+<script>
+    //So let's check it out.!
+    //Timer is a concept that we can use to execute a process repeatedly or just once
+    //over a time period
+
+    //will wait 2000ms and then recursively call the process everytime it completes 2000ms
+    let count=0;
+    setInterval(function(){
+        count+=1;
+        console.log(count);
+    },2000);
+
+    // setInterval(function(){},2000);//repeatedly
+
+
+    //wait 2000 ms and then will invoke the process only one time
+    setTimeout(function(){
+        console.log("Hello");
+    },2000);
+
+
+
+
+</script>
+</body>
+</html>
